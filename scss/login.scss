@@ -33,7 +33,7 @@ form {
 form label {
   display: inline-block;
   font-weight: 700;
-  font-size: 1.125rem; // 18px
+  font-size: 1.8rem; // 18px
 }
 
 .form-input {
@@ -59,7 +59,7 @@ form label {
   margin-top: -2px;
   left: 16px;
   color: var(--error);
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
@@ -159,7 +159,7 @@ a.password-inv {
   }
 
   form label {
-    font-size: 0.875rem; // 14px
+    font-size: 1.4rem; // 14px
   }
 
   .password-inv {
@@ -169,7 +169,7 @@ a.password-inv {
 
   .button.btn-large.submit-button {
     width: 100%;
-    font-size: 1rem; // 16px
+    font-size: 1.6rem; // 16px
   }
 
   /* Social Login */
