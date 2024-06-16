@@ -1,11 +1,11 @@
-const FORM_ELEMENT = document.querySelector("form");
+const formElement = document.querySelector("form");
 const passwordInvisibleElement = document.querySelectorAll("a.password-inv");
 const passwordInputElement = document.querySelectorAll(
   "#password, #password-check"
 );
 
 // focusout이 일어나면 <input>+<button> 변화 기능
-FORM_ELEMENT.addEventListener("focusout", (e) => {
+formElement.addEventListener("focusout", (e) => {
   if (e.target.classList.contains("form-input")) {
     validateInput(e.target);
     checkRequiredValues();
@@ -13,7 +13,7 @@ FORM_ELEMENT.addEventListener("focusout", (e) => {
 });
 
 // input이 일어나면 <button> 변화 기능
-FORM_ELEMENT.addEventListener("input", (e) => {
+formElement.addEventListener("input", (e) => {
   if (e.target.classList.contains("form-input")) {
     updateButtonLive(e.target);
   }
@@ -51,7 +51,7 @@ function validateInput(input) {
   let isValid = false; // boolean (input 태그가 유효한지 검증하는 변수)
   let validMessage = ""; // 에러 메세지
 
-  if (input.value == "" && input.required) {
+  if (input.value.trim === "" && input.required) {
     validMessage = `${input.placeholder}.`;
   } else {
     switch (input.id) {
